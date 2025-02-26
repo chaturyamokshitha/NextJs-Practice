@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Open_Sans } from "next/font/google";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const openSans = Open_Sans({
     subsets: ["latin"],
@@ -9,6 +10,38 @@ const openSans = Open_Sans({
 });
 
 export default function Welcome() {
+    const [income, setIncome] = useState("");
+    const [name, setName] = useState("");
+    const [goals, setGoals] = useState("");
+    const [message, setMessage] = useState("");
+    const router = useRouter();
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setMessage("");
+
+        const formData = { income, name, goals };
+
+        try {
+            const response = await fetch("/api/test", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                const userData = await response.json();
+                localStorage.setItem("currentUser", JSON.stringify(userData)); // ✅ Store current user
+                setMessage("Data saved successfully! ✅");
+                router.push("/home"); // ✅ Navigate to home
+            } else {
+                setMessage("Error saving data. ❌");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            setMessage("Error saving data. ❌");
+        }
+    };
 
     return (
         <div className={`min-h-screen flex flex-col md:flex-row bg-[#1E1E1E] ${openSans.className}`}>
@@ -40,6 +73,7 @@ export default function Welcome() {
                         value={income}
                         onChange={(e) => setIncome(e.target.value)}
                         className="w-full p-4 bg-[#1E1E1E] placeholder-gray-400 placeholder:text-xl text-center text-white outline-none border-0 border-b-2 border-gray-400 focus:border-green-400 transition-all"
+                        required
                     />
                     <input
                         type="text"
@@ -47,6 +81,7 @@ export default function Welcome() {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         className="w-full p-4 bg-[#1E1E1E] placeholder-gray-400 placeholder:text-xl text-center text-white outline-none border-0 border-b-2 border-gray-400 focus:border-green-400 transition-all"
+                        required
                     />
                     <input
                         type="text"
@@ -54,6 +89,7 @@ export default function Welcome() {
                         value={goals}
                         onChange={(e) => setGoals(e.target.value)}
                         className="w-full p-4 bg-[#1E1E1E] placeholder-gray-400 placeholder:text-xl text-center text-white outline-none border-0 border-b-2 border-gray-400 focus:border-green-400 transition-all"
+                        required
                     />
                     <button
                         type="submit"
@@ -63,6 +99,7 @@ export default function Welcome() {
                     </button>
                 </form>
 
+                {message && <p className="text-green-400 mt-4">{message}</p>}
             </div>
         </div>
     );
