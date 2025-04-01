@@ -22,3 +22,9 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* filepath: c:\Users\AYYAPPAREDDY\OneDrive\Desktop\nextjs practice\design3_installa\src\app\globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
