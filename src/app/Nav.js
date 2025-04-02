@@ -10,7 +10,7 @@ const Nav = () => {
         <div
             className="bg-white p-4 text-black font-sans"
             style={{
-                boxShadow: "0 4px 6px -1px rgba(254, 78, 90, 0.5), 0 2px 4px -2px rgba(254, 78, 90, 0.5)",
+                boxShadow: "0 8px 12px -2px rgba(254, 78, 90, 0.5), 0 4px 6px -4px rgba(254, 78, 90, 0.5)",
             }}
         >
             <div className="flex justify-between items-center md:pl-16 lg:pl-28 md:pr-16 lg:pr-28">
@@ -40,7 +40,7 @@ const Nav = () => {
                     <Link href="/about" className="text-sm lg:text-base">
                         About Us
                     </Link>
-                    <Link href="/contact" className="text-sm lg:text-base">
+                    <Link href="/services" className="text-sm lg:text-base">
                         Services
                     </Link>
                     <Link href="/careers" className="text-sm lg:text-base">
