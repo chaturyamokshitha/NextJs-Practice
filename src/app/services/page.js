@@ -39,9 +39,11 @@ const Services = () => {
                 </div>
                 <div className="mt-40">
                     <h1 className="text-2xl font-bold mb-4">Campaign Performance and Audience Analysis</h1>
-                    <p className="pr-20 text-[18px]">As part of our strategic arsenal, we provide businesses with access to personalized, data-rich reports on their audience’s online habits, interests, geographical location, gender, and device.
-                        <br></br><br></br>
-                        By doing so, we provide our clients with key information regarding the possible opportunities they can advance their digital marketing campaigns. By optimizing their current initiatives, our clients would gain access to real-time ROI measurements, a significant improvement of key KPIs such as: customer turnover rate ad percentage of sales from clients.</p>
+                    <p className="pr-20 text-[18px]">
+                      As part of our strategic arsenal, we provide businesses with access to personalized, data-rich reports on their audience&#39;s online habits, interests, geographical location, gender, and device.
+                      <br /><br />
+                      By optimizing their current initiatives, our clients would gain access to real-time ROI measurements, a significant improvement of key KPIs such as: customer turnover rate and percentage of sales from clients.
+                    </p>
                 <Image
                                             src="/mountain.svg"
                                             alt="Decorative mountain graphic"
