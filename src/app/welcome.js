@@ -25,7 +25,7 @@ const Welcome = () => {
                         alt="semi-rect"
                         width={150}
                         height={150}
-                        className="absolute top-40 left-60 mb-20"
+                        className="absolute top-20 md:top-40 left-30 md:left-60 mb-20"
                     />
                     <div className="ml-10">
                         <h2 className="text-sm md:text-md font-bold ml-0 md:ml-24 mt-14 mb-4" style={{ fontFamily: 'Open Sans, sans-serif' }}>
@@ -67,23 +67,23 @@ const Welcome = () => {
                 />
             </div>
 
-            <div className="mt-40 px-24 ">
+            <div className="mt-40 md:px-24  px-4">
                 <h1 className="text-black text-4xl text-center font-bold mb-10" style={{ fontFamily: 'Open Sans, sans-serif' }}>Services</h1>
 
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-20 z-10 ">
+                <div className="grid grid-cols-1 md:grid-cols-3 md:gap-20 gap-10 ">
                     <div className="bg-[#F8CBCE] text-black flex items-center flex-col rounded-4xl p-8">
                         <Image
                             src="/research 1.svg"
                             alt="research"
                             height={100}
                             width={80}
-                            className="mt-10 mb-8"
+                            className="md:mt-10 mb-8"
                         />
-                        <h1 className="text-2xl font-bold text-center mb-2" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+                        <h1 className="md:text-2xl text-xl font-bold text-center mb-2" style={{ fontFamily: 'Open Sans, sans-serif' }}>
                             User & Audience Insights Analysis
                         </h1>
-                        <p className="p-4" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+                        <p className="md:p-4" style={{ fontFamily: 'Open Sans, sans-serif' }}>
                             Data-rich audience insight reports, segmenting of audience based on their online habits, interests, and keywords.
                         </p>
                     </div>
@@ -93,12 +93,12 @@ const Welcome = () => {
                             height={50}
                             width={80}
                             alt="seo"
-                            className="mt-10 mb-8"
+                            className="md:mt-10 mb-8"
                         />
-                        <h1 className="text-2xl font-bold text-center mb-2" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+                        <h1 className="text-xl md:text-2xl font-bold text-center mb-2" style={{ fontFamily: 'Open Sans, sans-serif' }}>
                             Performance Marketing Campaigns
                         </h1>
-                        <p className="p-4" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+                        <p className="md:p-4" style={{ fontFamily: 'Open Sans, sans-serif' }}>
                             Real-time ROI measurements optimizing KPIs such as customer turnover rate and percentage of sales from new clients.
                         </p>
                     </div>
@@ -108,9 +108,9 @@ const Welcome = () => {
                             height={50}
                             width={80}
                             alt="content"
-                            className="mt-10 mb-8"
+                            className="md:mt-10 mb-8"
                         />
-                        <h1 className="text-2xl font-bold text-center mb-4" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+                        <h1 className="md:text-2xl text-xl font-bold text-center mb-2" style={{ fontFamily: 'Open Sans, sans-serif' }}>
                             Keyword Targeting
                         </h1>
                         <p className="p-4" style={{ fontFamily: 'Open Sans, sans-serif' }}>
@@ -165,21 +165,21 @@ const Welcome = () => {
                             className="md:ml-2"
                         />
                     </div>
-                    <div className="text-black lg:w-1/2 mt-14 ml-4 md:ml-28">
+                    <div className="text-black  mt-14 ml-4 md:ml-28">
                         <h2 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Open Sans, sans-serif' }}>Creating Business Growth</h2>
-                        <p className="mb-4 text-xl" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+                        <p className="mb-4 text-md" style={{ fontFamily: 'Open Sans, sans-serif' }}>
                             At Installa we offer you a results-driven approach to effectively reach your audience, while ensuring your brand’s relevancy on all social platforms through our strategic contextual targeting concepts. In addition, we optimize key KPIs like customer turnover rate and sales percentage of new clients, with the means to enable well-informed business decisions regarding the overall direction of your business’ current, as well as future projects.
                         </p>
-                        <Image
+                        <div className="flex flex-col justify-end items-end"><Image
                             src="/mountain.svg"
                             alt="mountain"
                             width={400}
                             height={150}
-                            className="md:ml-48 mb-4"
-                        />
-                        <button className="text-md text-[#FE4E5A] font-semibold border-2 border-[#FE4E5A] md:px-11 px-4 py-1 rounded-2xl ml-[315px] md:ml-96 hover:bg-[#FE4E5A] hover:text-white">
+                            className="mb-4"
+                        /></div>
+                        <div className="flex flex-col justify-end items-end"><button className="text-md text-[#FE4E5A] font-semibold border-2 border-[#FE4E5A] md:px-11 px-4 py-1 rounded-2xl md:ml-80 hover:bg-[#FE4E5A] hover:text-white">
                             Get Started Now
-                        </button>
+                        </button></div>
                     </div>
                 </div>
             </div>
@@ -191,7 +191,7 @@ const Welcome = () => {
                     alt="Decorative shape"
                     width={180}
                     height={150}
-                    className="relative  left-56 top-10"
+                    className="relative  left-20 md:left-56 top-10"
                 />
 
                 <div className="flex flex-col lg:flex-row items-start mt-20 px-6 lg:px-20">
@@ -241,7 +241,7 @@ const Welcome = () => {
 
 
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-20 ml-20 mr-20 mt-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-10 gap-y-20 ml-8 mr-8 md:ml-20 md:mr-20 mt-20">
                 <div className="bg-[#F8CBCE] text-black flex items-center flex-col rounded-4xl p-10  w-[590px] max-w-full">
                     <Image
                         src="/concept 1.svg"
