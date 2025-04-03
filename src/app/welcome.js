@@ -238,7 +238,6 @@ const Welcome = () => {
 
 
 
-            {"4 grid cells"}
             <div className="grid grid-cols-2 gap-x-10 gap-y-20 ml-20 mr-20 mt-20">
                 <div className="bg-[#F8CBCE] text-black flex items-center flex-col rounded-4xl p-10  w-[590px] max-w-full">
                     <Image
