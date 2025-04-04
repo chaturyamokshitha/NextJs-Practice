@@ -1,9 +1,11 @@
+"use client";
+import Link from "next/link";
 import Image from "next/image";
 import Nav from "./Nav"
 const Welcome = () => {
     return (
         <div>
-            
+
             <div className="grid md:grid-cols-2 grid-cols-1">
                 <div>
                     <Image
@@ -11,14 +13,14 @@ const Welcome = () => {
                         alt="semi-circle"
                         width={150}
                         height={150}
-                        className="relative w-[100px]"
+                        className="relative w-[100px] md:w-[150px]"
                     />
                     <Image
                         src="/arrows.svg"
                         alt="arrows"
                         width={40}
                         height={40}
-                        className="absolute top-40 md:top-48 left-4 w-[20px]"
+                        className="absolute top-40 md:top-48 left-4 w-[20px] md:w-[40px]"
                     />
                     <Image
                         src="/semi-rect.svg"
@@ -29,8 +31,8 @@ const Welcome = () => {
                     />
                     <div className="ml-10">
                         <h2 className="text-sm md:text-md font-bold ml-0 md:ml-24 mt-14 mb-4" style={{ fontFamily: 'Open Sans, sans-serif' }}>
-                        DIGITAL MARKETING AGENCY
-                    </h2>
+                            DIGITAL MARKETING AGENCY
+                        </h2>
                         <h1 className="text-xl md:text-5xl ml-0 md:ml-24 font-bold mb-2" style={{ fontFamily: 'Open Sans, sans-serif' }}>
                             We Build Your Digital <br /> Campaign Performance
                         </h1>
@@ -44,8 +46,8 @@ const Welcome = () => {
                             height={150}
                             className="md:ml-24 w-[180px]"
                         />
-                        </div>
-                   
+                    </div>
+
                 </div>
                 <div>
                     <Image
@@ -59,15 +61,17 @@ const Welcome = () => {
             </div>
 
             <div className="flex items-center justify-center mt-20">
-                <Image
-                    src="/down-arrow 2.svg"
-                    alt="down-arrow"
-                    width={70}
-                    height={150}
-                />
+                <button onClick={() => {
+                    document.getElementById("4")?.scrollIntoView({ behavior: "smooth" });
+                }}> <Image
+                        src="/down-arrow 2.svg"
+                        alt="down-arrow"
+                        width={70}
+                        height={150}
+                    /></button>
             </div>
 
-            <div className="mt-40 md:px-24  px-4">
+            <div className="mt-40 md:px-24  px-4 " id="4">
                 <h1 className="text-black text-4xl text-center font-bold mb-10" style={{ fontFamily: 'Open Sans, sans-serif' }}>Services</h1>
 
 
@@ -230,12 +234,16 @@ const Welcome = () => {
                     </div>
                 </div>
                 <div className="flex items-center justify-center mt-10">
-                    <Image
-                        src="/down-arrow 2.svg"
-                        alt="down-arrow"
-                        width={70}
-                        height={150}
-                    />
+                    <button onClick={() => {
+                        window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+                    }}>
+                        <Image
+                            src="/down-arrow 2.svg"
+                            alt="down-arrow"
+                            width={70}
+                            height={150}
+                        />
+                    </button>
                 </div>
             </div>
 
@@ -300,9 +308,11 @@ const Welcome = () => {
                 </h1>
                 <h2 className="text-center p-4">Further develop your successful online presence and scale up your business.</h2>
                 <div className="flex justify-center mt-4">
-                    <button className="text-md text-[#FE4E5A] font-semibold border-1 border-[#FE4E5A] px-11 py-2 rounded-4xl hover:bg-[#FE4E5A] hover:text-white transition-all duration-300">
-                        Get In Touch
-                    </button>
+                    <Link href="/contact">
+                        <button className="text-md text-[#FE4E5A] font-semibold border-1 border-[#FE4E5A] px-11 py-2 rounded-4xl hover:bg-[#FE4E5A] hover:text-white transition-all duration-300">
+                            Get In Touch
+                        </button>
+                    </Link>
                 </div>
                 <div className="lg:ml-10">
                     <Image

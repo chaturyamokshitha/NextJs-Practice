@@ -1,3 +1,5 @@
+"use client";
+import Link from "next/link";
 import Image from "next/image";
 
 const About = () => {
@@ -172,9 +174,11 @@ const About = () => {
                         Installa Marketing is your One-Stop-Solution for Campaign Performance Enhancement
                         and Keyword Targeting Initiatives.
                     </p>
-                    <button className="text-md text-[#FE4E5A] font-semibold border-2 border-[#FE4E5A] px-11 py-1 rounded-2xl md:ml-[400px] hover:bg-[#FE4E5A] hover:text-white">
-                        Contact Us
-                    </button>
+                    <Link href='/contact'>
+                        <button className="text-md text-[#FE4E5A] font-semibold border-2 border-[#FE4E5A] px-11 py-1 rounded-2xl md:ml-[400px] hover:bg-[#FE4E5A] hover:text-white">
+                            Contact Us
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

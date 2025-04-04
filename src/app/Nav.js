@@ -64,7 +64,7 @@ const Nav = () => {
                     <Link href="/about" className="text-sm">
                         About Us
                     </Link>
-                    <Link href="/contact" className="text-sm">
+                    <Link href="/services" className="text-sm">
                         Services
                     </Link>
                     <Link href="/careers" className="text-sm">
